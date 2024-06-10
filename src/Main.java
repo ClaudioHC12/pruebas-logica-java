@@ -21,7 +21,9 @@ public class Main {
         // numeroMayor(lista);
         // sumaLista(lista);
 
-        validarIngredientes();
+        // validarIngredientes();
+
+        sumaDigitosNumero(12345);
     }
 
     public static boolean validarPalindromo(String palabra) {
@@ -96,14 +98,14 @@ public class Main {
         while (!linea.equals("fin")) {
             linea = scanner.nextLine();
             String[] cadenas = linea.split(" ");
-            for(int i = 0; i < cadenas.length-1; i++){
+            for (int i = 0; i < cadenas.length - 1; i++) {
                 if (ingredientes.containsKey(cadenas[i])) {
                     String valor = ingredientes.get(cadenas[i]);
                     if (valor.equals("no")) {
-                        ingredientes.put(cadenas[i], cadenas[cadenas.length-1]);
+                        ingredientes.put(cadenas[i], cadenas[cadenas.length - 1]);
                     }
-                }else{
-                    ingredientes.put(cadenas[i], cadenas[cadenas.length-1]);
+                } else {
+                    ingredientes.put(cadenas[i], cadenas[cadenas.length - 1]);
                 }
             }
         }
@@ -113,5 +115,15 @@ public class Main {
             System.out.println(clave + ": " + valor);
         }
         scanner.close();
+    }
+
+    public static void sumaDigitosNumero(int numero) {
+        int suma = 0;
+        String conversion = String.valueOf(numero);
+        String[] arregloDigitos = conversion.split("");
+        for (String index : arregloDigitos) {
+            suma += Integer.valueOf(index);
+        }
+        System.out.println(suma);
     }
 }
