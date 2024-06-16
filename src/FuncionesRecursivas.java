@@ -41,4 +41,12 @@ public class FuncionesRecursivas {
     }
   }
 
+  public static int sumaRecursiva(int numero){
+    if (numero == 0) {
+      return 0;
+    }else{
+      return numero + sumaRecursiva(--numero);
+    }
+  }
+
 }

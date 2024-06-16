@@ -23,7 +23,10 @@ public class Main {
 
         // validarIngredientes();
 
-        sumaDigitosNumero(12345);
+        //sumaDigitosNumero(12345);
+
+        System.out.println(FuncionesRecursivas.sumaRecursiva(4));
+        
     }
 
     public static boolean validarPalindromo(String palabra) {
